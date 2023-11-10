@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+This is a repo I'm using to learn React Hooks via https://www.udemy.com/course/getting-started-with-react-hooks/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+The below is populated by [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
