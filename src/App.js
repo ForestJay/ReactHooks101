@@ -3,15 +3,9 @@ import { useState } from "react";
 
 function App() {
   const [count, setCount] = useState(0)
-  const increase = () => setCount((prevCount) => {
-    return prevCount + 1;
-  });
-  const decrease = () => setCount((prevCount) => {
-    return prevCount - 1;
-  });
-  const reset = () => setCount((prevCount) => {
-    return 0;
-  });
+  const increase = () => setCount(count + 1)
+  const decrease = () => setCount(count - 1)
+  const reset = () => setCount(0)
 
   return (
     <div>
