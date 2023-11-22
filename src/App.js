@@ -3,38 +3,35 @@ import React, { useState, useEffect } from "react";
 function useInput() {
   const [value, setValue] = useState('')
 
+  function onChange(event) {
+    setValue(event.target.value)
+  }
+
   return {
     value,
-    setValue
+    onChange
   }
 }
 
 function App() {
-  const { firstName, handleFirstNameChange } = useInput()
-  const { lastName, handleLastNameChange } = useInput()
-  const { age, handleAgeChange } = useInput()
-
   return (
     <form>
       <input
         type="text"
         placeholder="First Name"
-        value={firstName}
-        onChange={handleFirstNameChange}
+        {...useInput}
       />
 
       <input
         type="text"
         placeholder="Last Name"
-        value={lastName}
-        onChange={handleLastNameChange}
+        {...useInput}
       />
 
       <input
         type="number"
         placeholder="Age"
-        value={age}
-        onChange={handleAgeChange}
+        {...useInput}
       />
     </form>
   )
